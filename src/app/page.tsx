@@ -78,7 +78,7 @@ export default function Home() {
 
       <div className="text-center z-10 px-4">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8 animate-pulse">
-          Countdown to Menma's Birthday! 🎂
+          Countdown to Menma&apos;s Birthday! 🎂
         </h1>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mb-8">
