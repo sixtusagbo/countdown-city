@@ -19,7 +19,7 @@ export default function Home() {
   const [isCountdownFinished, setIsCountdownFinished] = useState(false);
 
   useEffect(() => {
-    const targetDate = new Date("2025-07-06T00:00:00");
+    const targetDate = new Date("2025-11-22T00:00:00");
 
     const calculateTimeLeft = (): TimeLeft => {
       const now = new Date();
@@ -56,10 +56,10 @@ export default function Home() {
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-pink-400 via-purple-500 to-blue-500 animate-pulse">
         <div className="text-center">
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold text-white mb-8 animate-bounce">
-            🎉 Happy Birthday, Menma😍💙 🎉
+            🎉 Happy Birthday, Miralo💙🎉
           </h1>
           <div className="text-2xl md:text-4xl text-white font-semibold">
-            Hope your special day is amazing! 🎂✨
+            Hope your special day is amazing and bugless! 🎂✨
           </div>
         </div>
       </div>
@@ -78,7 +78,7 @@ export default function Home() {
 
       <div className="text-center z-10 px-4">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8 animate-pulse">
-          Countdown to Menma&apos;s Birthday! 🎂
+          Countdown to my Birthday! 🎂
         </h1>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mb-8">
@@ -120,7 +120,7 @@ export default function Home() {
         </div>
 
         <div className="text-xl md:text-2xl text-white/90 font-medium">
-          Until July 6th, 2025 at midnight 💙
+          Until Nov 22nd, 2025 at midnight 💙
         </div>
       </div>
     </div>
