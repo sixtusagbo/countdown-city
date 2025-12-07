@@ -19,7 +19,7 @@ export default function Home() {
   const [isCountdownFinished, setIsCountdownFinished] = useState(false);
 
   useEffect(() => {
-    const targetDate = new Date("2025-07-06T00:00:00");
+    const targetDate = new Date("2026-07-06T00:00:00");
 
     const calculateTimeLeft = (): TimeLeft => {
       const now = new Date();
