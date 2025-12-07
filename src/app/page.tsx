@@ -10,6 +10,7 @@ interface TimeLeft {
 }
 
 export default function Home() {
+  const [targetDate] = useState(new Date("2026-07-06T00:00:00"));
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({
     days: 0,
     hours: 0,
@@ -19,7 +20,6 @@ export default function Home() {
   const [isCountdownFinished, setIsCountdownFinished] = useState(false);
 
   useEffect(() => {
-    const targetDate = new Date("2026-07-06T00:00:00");
 
     const calculateTimeLeft = (): TimeLeft => {
       const now = new Date();
@@ -49,7 +49,7 @@ export default function Home() {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [targetDate]);
 
   if (isCountdownFinished) {
     return (
@@ -120,7 +120,7 @@ export default function Home() {
         </div>
 
         <div className="text-xl md:text-2xl text-white/90 font-medium">
-          Until July 6th, 2025 at midnight 💙
+          Until {targetDate.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })} at midnight 💙
         </div>
       </div>
     </div>
