@@ -20,7 +20,6 @@ export default function Home() {
   const [isCountdownFinished, setIsCountdownFinished] = useState(false);
 
   useEffect(() => {
-
     const calculateTimeLeft = (): TimeLeft => {
       const now = new Date();
       const difference = targetDate.getTime() - now.getTime();
@@ -78,7 +77,7 @@ export default function Home() {
 
       <div className="text-center z-10 px-4">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8 animate-pulse">
-          Countdown to Menma&apos;s Birthday! 🎂
+          Countdown to Auri&apos;s Birthday! 🎂
         </h1>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mb-8">
@@ -120,7 +119,13 @@ export default function Home() {
         </div>
 
         <div className="text-xl md:text-2xl text-white/90 font-medium">
-          Until {targetDate.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })} at midnight 💙
+          Until{" "}
+          {targetDate.toLocaleDateString("en-US", {
+            month: "long",
+            day: "numeric",
+            year: "numeric",
+          })}{" "}
+          at midnight 💙
         </div>
       </div>
     </div>
