@@ -281,12 +281,9 @@ export default function Home() {
       >
         {/* Header */}
         <div className="mb-12 md:mb-16">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4">
-            <span className="gradient-text">Countdown to</span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
+            <span className="gradient-text">Countdown to Auri&apos;s Birthday</span>
           </h1>
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white">
-            Auri&apos;s Birthday
-          </h2>
         </div>
 
         {/* Countdown grid */}
