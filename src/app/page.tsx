@@ -60,9 +60,9 @@ function TimeUnit({ value, label, max, color, delay }: TimeUnitProps) {
             />
             <defs>
               <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#ff6b9d" />
-                <stop offset="50%" stopColor="#c084fc" />
-                <stop offset="100%" stopColor="#22d3ee" />
+                <stop offset="0%" stopColor="#22d3ee" />
+                <stop offset="50%" stopColor="#3b82f6" />
+                <stop offset="100%" stopColor="#6366f1" />
               </linearGradient>
             </defs>
           </svg>
@@ -93,7 +93,7 @@ function Confetti() {
       left: Math.random() * 100,
       delay: Math.random() * 3,
       duration: 2 + Math.random() * 2,
-      color: ["#ff6b9d", "#c084fc", "#60a5fa", "#22d3ee", "#fbbf24"][
+      color: ["#22d3ee", "#38bdf8", "#3b82f6", "#6366f1", "#a5b4fc"][
         Math.floor(Math.random() * 5)
       ],
       size: 8 + Math.random() * 8,
@@ -130,7 +130,7 @@ function FloatingOrbs() {
         className="absolute top-1/4 -left-20 w-96 h-96 rounded-full animate-drift opacity-30"
         style={{
           background:
-            "radial-gradient(circle, rgba(255,107,157,0.4) 0%, transparent 70%)",
+            "radial-gradient(circle, rgba(56,189,248,0.4) 0%, transparent 70%)",
           animationDelay: "0s",
         }}
       />
@@ -138,7 +138,7 @@ function FloatingOrbs() {
         className="absolute top-1/2 -right-32 w-[500px] h-[500px] rounded-full animate-drift opacity-25"
         style={{
           background:
-            "radial-gradient(circle, rgba(192,132,252,0.4) 0%, transparent 70%)",
+            "radial-gradient(circle, rgba(59,130,246,0.4) 0%, transparent 70%)",
           animationDelay: "-5s",
         }}
       />
@@ -146,7 +146,7 @@ function FloatingOrbs() {
         className="absolute -bottom-20 left-1/3 w-80 h-80 rounded-full animate-drift opacity-30"
         style={{
           background:
-            "radial-gradient(circle, rgba(96,165,250,0.4) 0%, transparent 70%)",
+            "radial-gradient(circle, rgba(99,102,241,0.4) 0%, transparent 70%)",
           animationDelay: "-10s",
         }}
       />
@@ -160,17 +160,17 @@ function FloatingOrbs() {
       />
 
       {/* Small floating particles */}
-      <div className="absolute top-1/3 left-1/4 w-2 h-2 bg-pink-400 rounded-full animate-float opacity-60" />
+      <div className="absolute top-1/3 left-1/4 w-2 h-2 bg-cyan-400 rounded-full animate-float opacity-60" />
       <div
-        className="absolute top-2/3 right-1/3 w-3 h-3 bg-purple-400 rounded-full animate-float opacity-50"
+        className="absolute top-2/3 right-1/3 w-3 h-3 bg-sky-400 rounded-full animate-float opacity-50"
         style={{ animationDelay: "-2s" }}
       />
       <div
-        className="absolute bottom-1/4 left-1/2 w-2 h-2 bg-cyan-400 rounded-full animate-float opacity-60"
+        className="absolute bottom-1/4 left-1/2 w-2 h-2 bg-blue-400 rounded-full animate-float opacity-60"
         style={{ animationDelay: "-4s" }}
       />
       <div
-        className="absolute top-1/2 left-1/6 w-1.5 h-1.5 bg-blue-400 rounded-full animate-float opacity-40"
+        className="absolute top-1/2 left-1/6 w-1.5 h-1.5 bg-indigo-400 rounded-full animate-float opacity-40"
         style={{ animationDelay: "-1s" }}
       />
     </div>
@@ -181,7 +181,7 @@ function CelebrationScreen() {
   return (
     <div className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Animated gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-pink-600 via-purple-600 to-blue-600 animate-gradient" />
+      <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 via-blue-500 to-indigo-600 animate-gradient" />
 
       <Confetti />
       <FloatingOrbs />
@@ -263,14 +263,14 @@ export default function Home() {
   }
 
   const timeUnits = [
-    { value: timeLeft.days, label: "Days", max: 365, color: "bg-pink-500/20" },
-    { value: timeLeft.hours, label: "Hours", max: 24, color: "bg-purple-500/20" },
+    { value: timeLeft.days, label: "Days", max: 365, color: "bg-cyan-500/20" },
+    { value: timeLeft.hours, label: "Hours", max: 24, color: "bg-sky-500/20" },
     { value: timeLeft.minutes, label: "Minutes", max: 60, color: "bg-blue-500/20" },
-    { value: timeLeft.seconds, label: "Seconds", max: 60, color: "bg-cyan-500/20" },
+    { value: timeLeft.seconds, label: "Seconds", max: 60, color: "bg-indigo-500/20" },
   ];
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden bg-[#0a0a0f]">
+    <div className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden bg-[#050a14]">
       <FloatingOrbs />
 
       {/* Main content */}
@@ -303,7 +303,7 @@ export default function Home() {
         {/* Target date display */}
         <div className="glass-card rounded-2xl px-6 py-4 md:px-8 md:py-5 inline-block">
           <p className="text-base md:text-lg text-white/70 font-medium tracking-wide">
-            <span className="text-white/50">Target:</span>{" "}
+            <span className="text-white/50">When:</span>{" "}
             <span className="text-white">
               {targetDate.toLocaleDateString("en-US", {
                 weekday: "long",
